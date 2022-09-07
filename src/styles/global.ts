@@ -24,4 +24,14 @@ button {
 button {
   cursor: pointer;
 }
+
+.bg-yellow-dark {
+  background-color: ${props => props.theme['yellow-dark']};
+}
+.bg-yellow {
+  background-color: ${props => props.theme['yellow']};
+}
+.bg-purple {
+  background-color: ${props => props.theme['purple']};
+}
 `
