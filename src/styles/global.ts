@@ -25,6 +25,9 @@ button {
   cursor: pointer;
 }
 
+.bg-base {
+  background-color: ${props => props.theme['base-text']};
+}
 .bg-yellow-dark {
   background-color: ${props => props.theme['yellow-dark']};
 }

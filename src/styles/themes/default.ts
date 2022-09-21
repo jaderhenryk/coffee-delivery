@@ -17,5 +17,8 @@ export const defaultTheme = {
   
   'yellow-dark':     '#C47F17',
   'yellow':          '#DBAC2C',
-  'yellow-light':    '#F1E9C9'
+  'yellow-light':    '#F1E9C9',
+
+  'font-regular': "'Roboto'",
+  'font-title': "'Baloo 2'"
 }

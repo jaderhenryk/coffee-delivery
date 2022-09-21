@@ -1,35 +1,38 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.div`
 
-width: 100%;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 32px 160px;
-/* gap: 820px; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 160px;
+  /* gap: 820px; */
 
-position: absolute;
-height: 104px;
-left: 0px;
-right: 0px;
-top: 0px;
+  position: relative;
+  height: 104px;
+  left: 0px;
+  /* right: 0px; */
+  top: 0px;
 
-  /* img {
-    width: 5rem;
-    height: 2.5rem;
-    top: 32px;
-    left: 160px
-  } */
+  div.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   nav {
     display: flex;
     gap: .75rem;
   }
 `
+interface HeaderButtonProps {
+  variant: 'yellow' | 'purple'
+}
 
-export const HeaderButton = styled.button`
+export const HeaderButton = styled.button<HeaderButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,23 +44,6 @@ export const HeaderButton = styled.button`
   padding: 0 .5rem;
   position: relative;
   font-size: 1rem;
-
-  &.btn-purple {
-    background-color: ${props => props.theme['purple-light']};
-    color: ${props => props.theme['purple']};
-
-    > span {
-      background-color: ${props => props.theme['purple-dark']};
-    }
-  }
-  &.btn-yellow {
-    background-color: ${props => props.theme['yellow-light']};
-    color: ${props => props.theme['yellow']};
-
-    > span {
-      background-color: ${props => props.theme['yellow-dark']};
-    }
-  }
 
   span {
     position: absolute;
@@ -74,4 +60,19 @@ export const HeaderButton = styled.button`
     font-size: .75rem;
     font-weight: 700;
   }
+
+  ${({ variant, theme }) => css`
+    background-color: ${theme[`${variant}-light`]};
+    color: ${theme[`${variant}-dark`]};
+
+    span {
+      background-color: ${theme[`${variant}-dark`]};
+    }
+  `}
+
+  ${({ variant, theme }) => variant === 'purple' && css`
+    svg {
+      color: ${theme['purple']}
+    }
+  `}
 `
