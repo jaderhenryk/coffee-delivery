@@ -10,6 +10,7 @@ export const defaultTheme = {
   'base-text':       '#574F4D',
   'base-subtitle':   '#403937',
   'base-title':      '#272221',
+  'error':           '#f84747',
 
   'purple-dark':     '#4B2995',
   'purple':          '#8047F8',

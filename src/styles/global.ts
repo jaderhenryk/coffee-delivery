@@ -37,4 +37,7 @@ button {
 .bg-purple {
   background-color: ${props => props.theme['purple']};
 }
+.base-background {
+  background-color: ${props => props.theme['base-background']};
+}
 `

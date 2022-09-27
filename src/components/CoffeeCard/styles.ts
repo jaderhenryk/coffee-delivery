@@ -89,7 +89,7 @@ export const CoffeCardFooter = styled.div`
 `;
 
 export const CoffeCardButtons = styled.div`
-  width: 7.5rem;
+  width: 8.75rem;
 
   > button {
     width: 2.4rem;

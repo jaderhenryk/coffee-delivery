@@ -10,7 +10,7 @@ export const HeaderContainer = styled.div`
   padding: 32px 160px;
   /* gap: 820px; */
 
-  position: relative;
+  position: sticky;
   height: 104px;
   left: 0px;
   /* right: 0px; */
@@ -44,6 +44,10 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
   padding: 0 .5rem;
   position: relative;
   font-size: 1rem;
+
+  &:disabled {
+    cursor: default;
+  }
 
   span {
     position: absolute;
